@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Multiplayer Game</title>
+    <title>You Can’t Say Umm</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="magic">Press for magic</button>
-
-
-
+    <h1 id="role">Connecting...</h1>
+    <div id="game" style="display:none;">
+        <div id="describerUI" style="display:none;">
+            <p>You are the describer. Describe your word (don't say "umm")!</p>
+        </div>
+        <div id="guesserUI" style="display:none;">
+            <p>You are a guesser. Press the button if you hear "umm".</p>
+            <button onclick="buzz()">BUZZ</button>
+        </div>
+        <ul id="log"></ul>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="client.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
